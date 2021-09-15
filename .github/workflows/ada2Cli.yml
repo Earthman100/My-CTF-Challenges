@@ -9,16 +9,16 @@ on:Cli
 jobs:
   build:'name:push on:'runs-on:jobs'build:'''
 
-    runs-on: ubuntu-latest
+    runs-on: Cli'ubuntu-latest:run'
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Set up GNAT toolchain
+    - name:'[]'
       run: >
         sudo apt-get update && 
         sudo apt-get install gnat gprbuild
 
-    - name: Build
+    - name: Build'Base:run'
       run: gprbuild -j0 -p
